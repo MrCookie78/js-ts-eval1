@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/*
+		Créer un fichier intitulé 01-exo.html
+		• Créer une fonction qui permet de trouver le premier caractère non répété dans une chaîne de
+		caractère
+		• par exemple pour la chaîne de caractère : 'bonjour'
+		• la fonction doit retourner : 'b'
+		• par exemple pour la chaîne de caractère : 'hello henry'
+		• la fonction doit retourner : 'o'
+		• par exemple pour la chaîne de caractère : 'coucou'
+		• la fonction doit retourner : null 
+		*/
+
+		function firstCaracter(word){
+			word = word.split("");
+
+			for (let i = 0; i < word.length; i++) {
+				if(word.filter((item) => { return item == word[i] }).length == 1){
+					return word[i];
+				}
+			}
+			return null;
+		}
+
+		console.log(firstCaracter(""));
+
+	</script>
+</body>
+</html>

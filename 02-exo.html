@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/*
+		1. Créer un fichier intitulé 02-exo.html
+		2. Créer une fonction qui prend deux paramètres de type string
+		3. Cette fonction retourne le nombre d'apparition de la lettre recherchée en majuscule ou en
+		minuscule
+		• par exemple si vous donnez à la fonction les paramètres : 'bonjour' , 'o'
+		• la fonction doit retourner : 2
+		• par exemple si vous donnez à la fonction les paramètres : 'bonjour' , 'O'
+		• la fonction doit retourner : 2
+		• par exemple si vous donnez à la fonction les paramètres : 'hello les amis' , 'o'
+		• la fonction doit retourner : 1
+		• par exemple si vous donnez à la fonction les paramètres : 'hello les amis' , 'z'
+		• la fonction doit retourner : 0
+		*/
+
+		function numberOfCaracter(word, letter){
+			word = word.toLowerCase().split("");
+
+			return word.filter((item) => { return item == letter.toLowerCase() }).length;
+
+		}
+
+		console.log(numberOfCaracter('hello les amis' , 'z'));
+
+	</script>
+</body>
+</html>

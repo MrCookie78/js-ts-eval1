@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/*
+		1. Créer un fichier intitulé 04-exo.html
+		2. Créer une fonction qui prend un paramètre de type tableau
+		3. Cette fonction retourne un élément aléatoire du tableau
+		• par exemple si vous donner à la fonction le paramètre : ['a', 'b' ,'c', 'd']
+		• la fonction peut retourner aléatoirement : soit 'a' soit 'b' soit 'c' soit 'd'
+		• par exemple si vous donner à la fonction le paramètre : []
+		• la fonction peut retourner un message d'erreur
+		• par exemple si vous donner à la fonction le paramètre : ''
+		• la fonction peut retourner un message d'erreur
+		*/
+
+		function random(tab){
+
+			if(!Array.isArray(tab)){
+				return "Le paramètre passé à la fonction n'est pas un tableau."
+			}
+			if(tab.length == 0){
+				return "Le tableau est vide"
+			}
+			return tab[Math.floor(Math.random() * (tab.length))];
+		}
+
+		console.log(random(['a', 'b' ,'c', 'd']));
+
+	</script>
+</body>
+</html>
